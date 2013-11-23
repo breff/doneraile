@@ -1,0 +1,27 @@
+{
+  "name": "doneraille",
+  "version": "0.0.1",
+  "authors": [
+    "Bref Murdoch <breffni_murdoch@yahoo.co.uk>"
+  ],
+  "description": "Doneraill Mobile App",
+  "directory" : "www/bower_components",
+  "main": "www/js/libs/backbone/backbone-min.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "www/node_modules",
+    "www/bower_components",
+    "www/js/libs",
+    "www/test",
+    "www/tests"
+  ],
+  "dependencies": {
+    "backbone": "~1.1.0",
+    "fastclick": "~0.6.10",
+    "handlebars": "~1.1.2",
+    "jquery": "~2.0.3",
+    "underscore": "~1.5.2"
+  }
+}
