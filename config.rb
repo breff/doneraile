@@ -4,7 +4,7 @@
 
 require "rgbapng"
 preferred_syntax = :scss
-project_path = "../doneraile"
+project_path = "../doneraile/www"
 css_dir = "css"
 sass_dir = "scss"
 output_style = (environment == :production) ? :compressed : :expanded

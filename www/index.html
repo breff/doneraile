@@ -61,11 +61,11 @@
                     <span></span>
                 </div>
                 <ul>
-                    <li class="fullwidth"><span class="icon-history" data-jshref="/history"></span><h1>History</h1></li>
-                    <li><span class="icon-info"></span><h1>Information</h1></li>
-                    <li><span class="icon-cafe"></span><h1>Tea Rooms</h1></li>
-                    <li><span class="icon-gallery"></span><h1>Gallery</h1></li>
-                    <li><span class="icon-follow"></span><h1>Follow Us</h1></li>
+                    <li class="fullwidth" data-jshref="/history"><span class="icon-history"></span><h1>History</h1></li>
+                    <li><span class="icon-info" data-jshref="/info"></span><h1>Information</h1></li>
+                    <li><span class="icon-cafe" data-jshref="/tearooms"></span><h1>Tea Rooms</h1></li>
+                    <li><span class="icon-gallery" data-jshref="/gallery"></span><h1>Gallery</h1></li>
+                    <li><span class="icon-follow" data-jshref="/follow"></span><h1>Follow Us</h1></li>
                 </ul>
 
             </div>
@@ -96,13 +96,15 @@
         <script type="text/javascript" src="js/libs/underscore/underscore-min.js"></script>
         <script type="text/javascript" src="js/libs/backbone/backbone.js"></script>
 
-
         <script type="text/javascript" src="js/util/common.js"></script>
         <script type="text/javascript" src="js/views/View.js"></script>
         <script type="text/javascript" src="js/views/TemplateView.js"></script>
         <script type="text/javascript" src="js/views/History.js"></script>
-        <script type="text/javascript" src="js/views/View2.js"></script>
-        <script type="text/javascript" src="js/views/View3.js"></script>
+        <script type="text/javascript" src="js/views/Gallery.js"></script>
+        <script type="text/javascript" src="js/views/Follow.js"></script>
+        <script type="text/javascript" src="js/views/Tearooms.js"></script>
+        <script type="text/javascript" src="js/views/Info.js"></script>
+
         <script type="text/javascript" src="js/routers/MainRouter.js"></script>
 
         <script type="text/javascript" src="js/index.js"></script>
@@ -114,12 +116,28 @@
             Oh this is the history page!!!
             <button>Close</button>
         </script>
-        <script type="text/template" id="view2-tmpl">
-            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.            
+
+        <script type="text/template" id="gallery-subview-tmpl">
+            Oh this is the gallery page!!!
+            <button>Close</button>
         </script>
-        <script type="text/template" id="view3-tmpl">
-            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.            
+
+        <script type="text/template" id="follow-subview-tmpl">
+            Oh this is the follow page!!!
+            <button>Close</button>
         </script>
+
+        <script type="text/template" id="tearooms-subview-tmpl">
+            Oh this is the tearooms page!!!
+            <button>Close</button>
+        </script>
+
+        <script type="text/template" id="info-subview-tmpl">
+            Oh this is the info page!!!
+            <button>Close</button>
+        </script>
+
+
 
     </body>
 </html>

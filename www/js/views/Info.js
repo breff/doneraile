@@ -1,9 +1,9 @@
 
 dd.ns("view");
 
-dd.view.History = dd.view.TemplateView.extend({
+dd.view.Info = dd.view.TemplateView.extend({
 
-    id: "subview-history",
+    id: "subview-ifo",
     className: "animated",
 
     events: {
@@ -12,7 +12,7 @@ dd.view.History = dd.view.TemplateView.extend({
 
 
     initialize: function(options) {
-        this.options = $.extend({}, { templateSelector: "#history-subview-tmpl"}, options);
+        this.options = $.extend({}, { templateSelector: "#info-subview-tmpl"}, options);
         console.log (this.options);
 	},
 

@@ -5,12 +5,13 @@ dd.router.MainRouter = Backbone.Router.extend({
 
 	_viewsCache: {},
 	_$contentEl: $("#app-container"),
+    _currentView: null,
 
     routes: {
         "history" : "_showHistory",
         "view2" : "_showView2",
         "view3" : "_showView3",
-        "*": "_default"
+        "*path": "_default"
     },
 
 
@@ -26,7 +27,9 @@ dd.router.MainRouter = Backbone.Router.extend({
     },
 
     _default: function () {
-        console.log ("default route");
+        if (this._currentView) {
+            this._currentView.$el.removeClass("fadeInUpBig").addClass("fadeInDownBig");
+        }
     },
 
 	_showInContainer: function(viewClass, options) {
@@ -45,7 +48,9 @@ dd.router.MainRouter = Backbone.Router.extend({
         }
 
         view.show();
-        view.$el.addClass("fadeInUpBig");
+        view.$el.removeClass("fadeInDownBig").addClass("fadeInUpBig");
+
+        this._currentView = view;
 
         return view;
 	},

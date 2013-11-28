@@ -72,7 +72,13 @@ h1 {
 
 /* ANIMATIONS */
 
-.animated{-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-ms-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:0.5s;-moz-animation-duration:0.5s;-ms-animation-duration:0.5s;-o-animation-duration:0.5s;animation-duration:0.5s;}.animated.hinge{-webkit-animation-duration:0.5s;-moz-animation-duration:0.5s;-ms-animation-duration:0.5s;-o-animation-duration:0.5s;animation-duration:0.5s;}@-webkit-keyframes fadeInUpBig {
+.animated{-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-ms-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:0.5s;-moz-animation-duration:0.5s;-ms-animation-duration:0.5s;-o-animation-duration:0.5s;animation-duration:0.5s;}.animated.hinge{-webkit-animation-duration:0.5s;-moz-animation-duration:0.5s;-ms-animation-duration:0.5s;-o-animation-duration:0.5s;animation-duration:0.5s;}
+
+/************************************************************************
+    ANIMATE FADE UP
+*/
+
+@-webkit-keyframes fadeInUpBig {
   0% {
     opacity: 0;
     -webkit-transform: translateY(1000px);
@@ -126,6 +132,67 @@ h1 {
 }
 
 
+
+
+/************************************************************************
+    ANIMATE FADE DOWN
+*/
+
+@-webkit-keyframes fadeInDownBig {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  } 100% {
+    opacity: 0;
+    -webkit-transform: translateY(1000px);
+  }
+}
+
+@-moz-keyframes fadeInDownBig {
+  0% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+  
+  100% {
+    opacity: 0;
+    -moz-transform: translateY(1000px);
+  }
+}
+
+@-o-keyframes fadeInDownBig {
+  0% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+  
+  100% {
+    opacity: 0;
+    -o-transform: translateY(1000px);
+  }
+}
+
+@keyframes fadeInDownBig {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  100% {
+    opacity: 0;
+    transform: translateY(1000px);
+  }
+}
+
+
+.fadeInDownBig {
+  -webkit-animation-name: fadeInDownBig;
+  -moz-animation-name: fadeInDownBig;
+  -o-animation-name: fadeInDownBig;
+  animation-name: fadeInDownBig;
+}
+
+
 /* MENU - add to _menu.scss */
 
 #app-container {
@@ -147,6 +214,12 @@ h1 {
 
     background-color: white;
 }
+
+
+
+
+
+
 
 #menu {
     position: absolute;
