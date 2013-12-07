@@ -10,13 +10,13 @@ Individual Tasks
 * grunt jshint
 
 Init Task	
+* cordova platform add android
 * grunt init
 
 Deploy Task
 * grunt deploy
 
 * delete "android" folder
-* cordova platform add android
 * cordova build
 
 

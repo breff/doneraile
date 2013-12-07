@@ -22,6 +22,7 @@ dd.router.MainRouter = Backbone.Router.extend({
 
         $("body")
             .on ("click", "*[data-jshref]", function(e) {
+
             	self.navigate($(e.currentTarget).data("jshref"), { trigger: true });
             	return false;
         	});
@@ -29,7 +30,24 @@ dd.router.MainRouter = Backbone.Router.extend({
 
     _default: function () {
         if (this._currentView) {
-            this._currentView.$el.removeClass("fadeInUpBig").addClass("fadeInDownBig");
+
+            if (this._nativeAnimate()) {
+                this._currentView.$el.removeClass("fadeInUpBig").addClass("fadeInDownBig");
+            }
+            else {
+                this._currentView.$el.css ({top: 1000});
+            }
+        }
+    },
+
+    _nativeAnimate: function () {
+
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.indexOf("android") !== -1) { // android with chrome
+            return (ua.indexOf("chrome") !== -1);
+        }
+        else {
+            return true; // native animate for all others...
         }
     },
 
@@ -49,10 +67,15 @@ dd.router.MainRouter = Backbone.Router.extend({
         }
 
         view.show();
-        view.$el.removeClass("fadeInDownBig").addClass("fadeInUpBig");
-
+        
+        if (this._nativeAnimate()) {        
+            view.$el.removeClass("fadeInDownBig").addClass("fadeInUpBig");
+        }
+        else {
+            view.$el.css ({top: 0});
+        }
+        
         this._currentView = view;
-
         return view;
 	},
 

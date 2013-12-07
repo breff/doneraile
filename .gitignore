@@ -9,4 +9,4 @@ Thumbs.db
 www/js/libs
 node_modules
 www/css/master.css
-platforms
+platforms/android

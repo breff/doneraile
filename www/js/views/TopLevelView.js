@@ -13,6 +13,7 @@ dd.view.TopLevelView = dd.view.TemplateView.extend({
 	},
 
     _close: function () {
+        //alert ("clicked...");
         this.options.router.navigate("/", { trigger: true });
     }
 });

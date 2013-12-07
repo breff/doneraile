@@ -72,7 +72,7 @@ h1 {
 
 /* ANIMATIONS */
 
-.animated{-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-ms-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:0.5s;-moz-animation-duration:0.5s;-ms-animation-duration:0.5s;-o-animation-duration:0.5s;animation-duration:0.5s;}.animated.hinge{-webkit-animation-duration:0.5s;-moz-animation-duration:0.5s;-ms-animation-duration:0.5s;-o-animation-duration:0.5s;animation-duration:0.5s;}
+.animated{-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-ms-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:0.3s;-moz-animation-duration:0.3s;-ms-animation-duration:0.3s;-o-animation-duration:0.3s;animation-duration:0.3s;}.animated.hinge{-webkit-animation-duration:0.3s;-moz-animation-duration:0.3s;-ms-animation-duration:0.3s;-o-animation-duration:0.3s;animation-duration:0.3s;}
 
 /************************************************************************
     ANIMATE FADE UP
@@ -132,7 +132,7 @@ h1 {
 }
 
 /************************************************************************
-    ANIMATE SLIDE IN FROM RIGHT
+    ANIMATE SLIDE IN FROM RIGHT UP
 */
 
 @-webkit-keyframes slideInRight {
@@ -283,10 +283,13 @@ h1 {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     background:url("../img/bg-menu-alt.png") no-repeat center center;
+    background-size: cover;
     background-attachment: fixed;
-    background-size: cover; 
     z-index: 990;   
 }
+
+/* TODO show different screen bg based on media queries as fixed cover bg not supported on chrome argh!! */
+
 
 #menu #menu-header {
     height: 100px;
@@ -318,12 +321,13 @@ h1 {
   border-bottom: 1px solid;
   border-bottom-color: #ccc;
   border-bottom-color: rgba(255, 255, 255, 0.2);
-  background-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   width: 100%;
   height: 30%;
   width: 48%;
   float: left;
+  max-height: 106px;
 
     padding: 0;
     margin: 10px 0 0 0;

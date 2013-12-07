@@ -22,7 +22,7 @@ var app = {
         this.bindEvents();
 
         // TMP
-        //this.onDeviceReady();        
+        this.onDeviceReady();        
     },
     // Bind Event Listeners
     //
