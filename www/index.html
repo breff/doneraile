@@ -29,6 +29,7 @@
         <link rel="stylesheet" type="text/css" href="fonts/stylesheet.css">
         <link rel="stylesheet" type="text/css" href="css/topcoat/css/topcoat-mobile-dark.min.css">
         <link rel="stylesheet" type="text/css" href="css/topcoat.css" />
+        <link rel="stylesheet" type="text/css" href="css/photoswipe/photoswipe.css" />
 
         <title>Hello World</title>
     </head>
@@ -62,10 +63,10 @@
                 </div>
                 <ul>
                     <li class="fullwidth" data-jshref="/history"><span class="icon-history"></span><h1>History</h1></li>
-                    <li><span class="icon-info" data-jshref="/info"></span><h1>Information</h1></li>
-                    <li><span class="icon-cafe" data-jshref="/tearooms"></span><h1>Tea Rooms</h1></li>
-                    <li><span class="icon-gallery" data-jshref="/gallery"></span><h1>Gallery</h1></li>
-                    <li><span class="icon-follow" data-jshref="/follow"></span><h1>Follow Us</h1></li>
+                    <li data-jshref="/info"><span class="icon-info"></span><h1>Information</h1></li>
+                    <li data-jshref="/tearooms"><span class="icon-cafe"></span><h1>Tea Rooms</h1></li>
+                    <li data-jshref="/gallery"><span class="icon-gallery"></span><h1>Gallery</h1></li>
+                    <li data-jshref="/follow"><span class="icon-follow"></span><h1>Follow Us</h1></li>
                 </ul>
 
             </div>
@@ -96,9 +97,13 @@
         <script type="text/javascript" src="js/libs/underscore/underscore-min.js"></script>
         <script type="text/javascript" src="js/libs/backbone/backbone.js"></script>
 
+        <!-- TODO get this uzing bower direct from git https://github.com/codecomputerlove/PhotoSwipe -->
+        <script type="text/javascript" src="js/libs_nonbower/photoswipe/photoswipe.3.0.4.min.js"></script>
+
         <script type="text/javascript" src="js/util/common.js"></script>
         <script type="text/javascript" src="js/views/View.js"></script>
         <script type="text/javascript" src="js/views/TemplateView.js"></script>
+        <script type="text/javascript" src="js/views/TopLevelView.js"></script>        
         <script type="text/javascript" src="js/views/History.js"></script>
         <script type="text/javascript" src="js/views/Gallery.js"></script>
         <script type="text/javascript" src="js/views/Follow.js"></script>
@@ -118,8 +123,29 @@
         </script>
 
         <script type="text/template" id="gallery-subview-tmpl">
-            Oh this is the gallery page!!!
-            <button>Close</button>
+
+
+                <div class="gallery-item">
+                    <a href="">
+                        <img src=""/>
+                    </a>
+                </div>
+
+
+                <div class="gallery-item">
+                    <a href="">
+                        <img src=""/>
+                    </a>
+                </div>
+
+
+                <div class="gallery-item">
+                    <a href="">
+                        <img src=""/>
+                    </a>
+                </div>
+
+
         </script>
 
         <script type="text/template" id="follow-subview-tmpl">

@@ -9,11 +9,12 @@ dd.router.MainRouter = Backbone.Router.extend({
 
     routes: {
         "history" : "_showHistory",
-        "view2" : "_showView2",
-        "view3" : "_showView3",
+        "follow" : "_showFollow",
+        "gallery" : "_showGallery",
+        "tearooms" : "_showTearooms",
+        "info" : "_showInfo",
         "*path": "_default"
     },
-
 
     initialize: function () {
 
@@ -57,21 +58,14 @@ dd.router.MainRouter = Backbone.Router.extend({
 
     _getCachedView: function (viewClass, options) {
 
-        console.log (viewClass);
-
         var view = null;
 
         if (this._viewsCache[viewClass]) {
-            console.log ("1");
             view = this._viewsCache[viewClass];
         }
         else {
-
-            console.log ("INIT VIEW...");
             options.router = this;
             view = (this._viewsCache[viewClass] = new dd.view[viewClass] (options));
-
-            console.log (this._viewsCache);
         }
 
         return view;
@@ -81,14 +75,21 @@ dd.router.MainRouter = Backbone.Router.extend({
         this._showInContainer("History", {}).refresh();
     },
 
-    _showView2: function() {
-        this._showInContainer("View2", {}).refresh();
+    _showFollow: function() {
+        this._showInContainer("Follow", {}).refresh();
     },
 
-    _showView3: function() {
-        this._showInContainer("View3", {}).refresh();
+    _showGallery: function() {
+        this._showInContainer("Gallery", {}).refresh();
+    },
+
+    _showTearooms: function() {
+        this._showInContainer("Tearooms", {}).refresh();
+    },
+
+    _showInfo: function() {
+        this._showInContainer("Info", {}).refresh();
     }
 
-
-
 });
+
