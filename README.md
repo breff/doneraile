@@ -15,4 +15,8 @@ Init Task
 Deploy Task
 * grunt deploy
 
+* delete "android" folder
+* cordova platform add android
+* cordova build
+
 
