@@ -38,11 +38,13 @@ var app = {
     onDeviceReady: function() {
 
         app.receivedEvent('deviceready');
-        FastClick.attach(document.body);
+        //FastClick.attach(document.body);
 
         new dd.router.MainRouter();
-        Backbone.history.start({pushState:true});       
+        //Backbone.history.start({pushState:true});       
+        Backbone.history.start();       // old android doesn't support pushstate :(
     },
+
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         /*

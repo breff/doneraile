@@ -21,11 +21,29 @@ dd.router.MainRouter = Backbone.Router.extend({
     	var self = this;
 
         $("body")
-            .on ("click", "*[data-jshref]", function(e) {
+            .on ("touchstart", "*[data-jshref]", function(e) {
+                var $tgt = $(e.currentTarget);
+                
+                /*
+                if ($tgt.closest("#menu").length) {
+                    $tgt.css ("background-color", "rgba(255, 255, 255, 0.2)");
+                    setTimeout(function(){
+                    //$tgt.css ("background-color", "red");
+                    },2000);
+                }*/
 
-            	self.navigate($(e.currentTarget).data("jshref"), { trigger: true });
-            	return false;
-        	});
+                self.navigate($tgt.data("jshref"), { trigger: true });
+                return false;
+        });
+
+        $("body")
+            .on ("click", "*[data-jshref]", function(e) {
+                var $tgt = $(e.currentTarget);
+
+                self.navigate($tgt.data("jshref"), { trigger: true });
+                return false;
+            });
+
     },
 
     _default: function () {
@@ -43,8 +61,8 @@ dd.router.MainRouter = Backbone.Router.extend({
     _nativeAnimate: function () {
 
         var ua = navigator.userAgent.toLowerCase();
-        if (ua.indexOf("android") !== -1) { // android with chrome
-            return (ua.indexOf("chrome") !== -1);
+        if (ua.indexOf("android") !== -1) { // modern android should support anim
+            return (ua.indexOf("android 4") !== -1);
         }
         else {
             return true; // native animate for all others...
@@ -95,6 +113,7 @@ dd.router.MainRouter = Backbone.Router.extend({
     },
 
     _showHistory: function() {
+		alert ("hello");
         this._showInContainer("History", {}).refresh();
     },
 
