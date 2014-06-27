@@ -1,0 +1,37 @@
+
+#subview-gallery {
+
+  background-color: black;
+  padding: 0;
+  text-align: center;
+
+  .gallery-item {
+
+    display: inline-block;
+    width: 25%;
+    position: relative;
+    padding: 0px;
+    height: 100px;
+    clear: none;
+    float: left;
+    outline: 4px solid black;
+    overflow: hidden;
+
+    a {
+
+      display: inline-block;
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
+      height: 100px;
+      overflow: hidden;
+
+      img {
+        display: inline-block;
+        height: 96px;
+        width: 100%;
+        margin: 0px;
+      }
+    }
+  }
+}

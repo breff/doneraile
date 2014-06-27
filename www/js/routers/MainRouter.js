@@ -47,14 +47,9 @@ dd.router.MainRouter = Backbone.Router.extend({
     },
 
     _default: function () {
-        if (this._currentView) {
 
-            if (this._nativeAnimate()) {
-                this._currentView.$el.removeClass("fadeInUpBig").addClass("fadeInDownBig");
-            }
-            else {
-                this._currentView.$el.css ({top: 1000});
-            }
+        if (this._currentView) {
+            this._animateVertical (false);
         }
     },
 
@@ -76,7 +71,7 @@ dd.router.MainRouter = Backbone.Router.extend({
 		var self = this,
 			view = this._getCachedView (viewClass, options);
 
-        this._$contentEl.find(">.page").hide();
+        this._$contentEl.addClass("enable-scrolling").find(">.page").hide();
 
         // inject if doesn't exist, then show it
         if (!$.contains(this._$contentEl.get(0), view.el)) {
@@ -85,17 +80,44 @@ dd.router.MainRouter = Backbone.Router.extend({
         }
 
         view.show();
-        
-        if (this._nativeAnimate()) {        
-            view.$el.removeClass("fadeInDownBig").addClass("fadeInUpBig");
-        }
-        else {
-            view.$el.css ({top: 0});
-        }
-        
-        this._currentView = view;
+        this._currentView = view;        
+        this._animateVertical (true);
+
         return view;
 	},
+
+    _animateVertical: function (open) {
+
+        var self = this;
+
+        if (open) {
+
+            if (this._nativeAnimate()) {        
+                this._currentView.$el.removeAttr("style").addClass("anim-perf-fix").removeClass("fadeInDownBig").addClass("fadeInUpBig");
+                setTimeout(function () {
+                    self._currentView.$el.removeClass("anim-perf-fix").css("animation-name", "none").css("-webkit-animation-name", "none");
+                }, 700);
+            }
+            else {
+                this._currentView.$el.css ({top: 0});
+            }
+        }
+
+        // close
+        else {
+            
+            this._$contentEl.scrollTop(0);            
+
+            if (this._nativeAnimate()) {               
+                this._currentView.$el.removeClass("fadeInUpBig").removeAttr("style").addClass("anim-perf-fix").addClass("fadeInDownBig");         
+            }
+            else {
+                this._currentView.$el.css ({top: 1000});
+            }
+
+            this._$contentEl.removeClass("enable-scrolling");
+        }
+    },
 
     _getCachedView: function (viewClass, options) {
 
@@ -112,8 +134,7 @@ dd.router.MainRouter = Backbone.Router.extend({
         return view;
     },
 
-    _showHistory: function() {
-		alert ("hello");
+    _showHistory: function() {		
         this._showInContainer("History", {}).refresh();
     },
 

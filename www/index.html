@@ -25,240 +25,179 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
         <!-- device-dpi -->
 
+        <link rel="stylesheet" type="text/css" href="js/libs_nonbower/jquery-mobile/jquery.mobile-1.4.2.min.css" />
+        <link rel="stylesheet" type="text/css" href="js/libs_nonbower/jquery-mobile/jquery.mobile.inline-png-1.4.2.min.css" />
         <link rel="stylesheet" type="text/css" href="css/master.css" />
-        <link rel="stylesheet" type="text/css" href="fonts/stylesheet.css">
+        <!-- <link rel="stylesheet" type="text/css" href="fonts/stylesheet.css">
         <link rel="stylesheet" type="text/css" href="css/topcoat/css/topcoat-mobile-dark.min.css">
-        <link rel="stylesheet" type="text/css" href="css/topcoat.css" />
+        <link rel="stylesheet" type="text/css" href="css/topcoat.css" /> -->
         <link rel="stylesheet" type="text/css" href="css/photoswipe/photoswipe.css" />
 
-        <title>Hello World</title>
+        <title>Doneraille</title>
     </head>
-    <body class="dark">
+    <body>
 
-        <!--
-        <div class="topcoat-button-bar full">
-           <label class="topcoat-button-bar__item">
-             <input type="radio" name="topcoat">
-             <button data-jshref="/view1" class="topcoat-button-bar__button full">One</button>
-           </label>
-           <label class="topcoat-button-bar__item">
-             <input type="radio" name="topcoat">
-             <button data-jshref="/view2" class="topcoat-button-bar__button full">Two</button>
-           </label>
-           <label class="topcoat-button-bar__item">
-             <input type="radio" name="topcoat">
-             <button data-jshref="/view3" class="topcoat-button-bar__button full">Three</button>
-           </label>
-        </div>
-    -->
+        <div data-role="page" id="main-page">
 
-        <div id="app-container">
-
-
-            <div id="menu" class="animated">
+        	<div role="main" class="ui-content" id="menu">
 
                 <div id="menu-header">
                     <span></span>
                     <span></span>
                 </div>
                 <ul>
-                    <li class="fullwidth" data-jshref="/history"><span class="icon-history"></span><h1>History</h1></li>
-                    <li data-jshref="/info"><span class="icon-info"></span><h1>Information</h1></li>
-                    <li data-jshref="/tearooms"><span class="icon-cafe"></span><h1>Tea Rooms</h1></li>
-                    <li data-jshref="/gallery"><span class="icon-gallery"></span><h1>Gallery</h1></li>
-                    <li data-jshref="/follow"><span class="icon-follow"></span><h1>Follow Us</h1></li>
+                    <li class="fullwidth"><a href="#history" data-transition="slide"><span class="icon-history"></span><h1>History</h1></a></li>
+                    <li><a href="#info" data-transition="slide"><span class="icon-info"></span><h1>Information</h1></a></li>
+                    <li><a href="#tearooms" data-transition="slide"><span class="icon-cafe"></span><h1>Tea Rooms</h1></a></li>
+                    <li><a href="#gallery" data-transition="slide"><span class="icon-gallery"></span><h1>Gallery</h1></a></li>
+                    <li><a href="#follow" data-transition="slide"><span class="icon-follow"></span><h1>Follow Us</h1></a></li>
                 </ul>
 
-            </div>
-
-
-
+        	</div>
 
         </div>
 
-        <!--
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
+        <div data-role="page" id="tearooms">
+
+          <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="">
+            <h1>Tea Rooms</h1>
+          </div>
+
+          <div role="main" class="ui-content">
+            <p>Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!</p>
+          </div>
+
         </div>
 
-        <div id="version"></div>
-        -->
+
+        <div data-role="page" id="history">
+
+          <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="">
+            <h1>History</h1>
+          </div>
+
+          <div role="main" class="ui-content" id="subview-history">
+            <ul>
+                <a href="#history-chapter-1" data-transition="slide" ><li id="history-chapter-1"><h1>Foreword &gt;</h1></li></a>
+                <li id="history-chapter-2"><h1>Contents &gt;</h1></li>
+                <li id="history-chapter-3"><h1>Introduction &gt;</h1></li>
+                <li id="history-chapter-4"><h1>Rossagh and the Kings of Munster &gt;</h1></li>
+                <li id="history-chapter-5"><h1>The Synans  &gt;</h1></li>
+                <li id="history-chapter-6"><h1>The St. Leger Forebears &gt;</h1> </li>
+                <li id="history-chapter-7"><h1>Edmund Spenser &gt;</h1></li>
+                <li id="history-chapter-8"><h1>Viscounts Doneraile: The First Creation</h1></li>
+                <li id="history-chapter-9"><h1>Doneraile Court</h1></li>
+                <li id="history-chapter-10"><h1>The Lady Freemason</h1></li>
+                <li id="history-chapter-11"><h1>Viscount Doneraile: The Second Creation</h1></li>
+                <li id="history-chapter-12"><h1>Doneraile Demesne</h1></li>
+                <li id="history-chapter-13"><h1>Steeple-to-Steeple</h1></li>
+                <li id="history-chapter-14"><h1>Doneraile Conspiracy</h1></li>
+                <li id="history-chapter-15"><h1>William Makepeace Thackeray</h1></li>
+                <li id="history-chapter-16"><h1>Viscountess Doneraile </h1></li>
+                <li id="history-chapter-17"><h1>The Fourth Viscount and the Fox</h1></li>
+                <li id="history-chapter-18"><h1>Priests and Poets</h1></li>
+                <li id="history-chapter-19"><h1>The Co-Operative Movement</h1></li>
+                <li id="history-chapter-20"><h1>Lord Castletown</h1></li>
+                <li id="history-chapter-21"><h1>Justice Oliver Wendell Holmes</h1> </li>
+                <li id="history-chapter-22"><h1>Castlepook Caves</h1></li>
+                <li id="history-chapter-23"><h1>Croke Park</h1></li>
+                <li id="history-chapter-24"><h1>The Lysaght Family</h1></li>
+                <li id="history-chapter-25"><h1>Elizabeth Bowen</h1></li>
+                <li id="history-chapter-26"><h1>Terence Millin</h1></li>
+                <li id="history-chapter-27"><h1>Honor Tracy</h1></li>
+                <li id="history-chapter-28"><h1>Doneraile Village</h1></li>
+                <li id="history-chapter-29"><h1>Further Reading</h1></li>
+            </ul>
+          </div>
+
+        </div>
+
+
+        <div data-role="page" id="history-chapter-1">
+
+          <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="">
+            <h1>Foreword</h1>
+          </div>
+
+          <div role="main" class="ui-content">
+            <p>Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!Oh this is the tearooms page!!!</p>
+          </div>
+
+        </div>
+
+
+
+        <div data-role="page" id="gallery" data-use-view="Gallery">
+
+          <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="">
+            <h1>Gallery</h1>
+          </div>
+
+          <div role="main" class="ui-content" id="subview-gallery">
+
+          </div>
+
+        </div>
+
+
+        <div data-role="page" id="follow" data-use-view="FollowView">
+
+          <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="">
+            <h1>Follow Us</h1>
+          </div>
+
+          <div role="main" class="ui-content" id="subview-follow">
+
+                <ul>
+                    <li id="facebook">
+                        <h1>DoneraileOnline</h1>
+                    </li>
+                    <li id="twitter">
+                        <h1>@DoneraileOnline</h1>
+                    </li>
+                </ul>
+
+          </div>
+
+        </div>
+
+
+        <div data-role="page" id="info">
+
+          <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="">
+            <h1>Information</h1>
+          </div>
+
+          <div role="main" class="ui-content">
+
+          </div>
+
+        </div>
+
+
 
         <script type="text/javascript" src="cordova.js"></script>
 
         <!-- get bower libs -->
-        <script type="text/javascript" src="js/libs/fastclick/lib/fastclick.js"></script>
         <script type="text/javascript" src="js/libs/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="js/libs/handlebars/handlebars.min.js"></script>
         <script type="text/javascript" src="js/libs/underscore/underscore-min.js"></script>
         <script type="text/javascript" src="js/libs/backbone/backbone.js"></script>
 
         <!-- TODO get this uzing bower direct from git https://github.com/codecomputerlove/PhotoSwipe -->
+        <script type="text/javascript" src="js/libs_nonbower/jquery-mobile/jquery.mobile-1.4.2.min.js"></script>
         <script type="text/javascript" src="js/libs_nonbower/photoswipe/photoswipe.3.0.4.min.js"></script>
 
         <script type="text/javascript" src="js/util/common.js"></script>
         <script type="text/javascript" src="js/views/View.js"></script>
-        <script type="text/javascript" src="js/views/TemplateView.js"></script>
-        <script type="text/javascript" src="js/views/TopLevelView.js"></script>        
-        <script type="text/javascript" src="js/views/History.js"></script>
+        <script type="text/javascript" src="js/views/FollowView.js"></script>
         <script type="text/javascript" src="js/views/Gallery.js"></script>
-        <script type="text/javascript" src="js/views/Follow.js"></script>
-        <script type="text/javascript" src="js/views/Tearooms.js"></script>
-        <script type="text/javascript" src="js/views/Info.js"></script>
-
-        <script type="text/javascript" src="js/routers/MainRouter.js"></script>
 
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
         </script>
 
-        <script type="text/template" id="history-subview-tmpl">
-            Oh this is the history page!!!
-            <button>Close</button>
-        </script>
-
-        <script type="text/template" id="gallery-subview-tmpl">
-
-
-                <div class="gallery-item">
-                    <a href="img/gallery/demo.png">
-                        <img src="img/gallery/demo.png"/>
-                    </a>
-                </div>
-
-
-                <div class="gallery-item">
-                    <a href="img/gallery/demo.png">
-                        <img src="img/gallery/demo.png"/>
-                    </a>
-                </div>
-
-
-                <div class="gallery-item">
-                    <a href="img/gallery/demo.png">
-                        <img src="img/gallery/demo.png"/>
-                    </a>
-                </div>
-
-                <div class="gallery-item">
-                    <a href="img/gallery/demo.png">
-                        <img src="img/gallery/demo.png"/>
-                    </a>
-                </div>
-
-
-                <div class="gallery-item">
-                    <a href="img/gallery/demo.png">
-                        <img src="img/gallery/demo.png"/>
-                    </a>
-                </div>
-
-
-                <div class="gallery-item">
-                    <a href="img/gallery/demo.png">
-                        <img src="img/gallery/demo.png"/>
-                    </a>
-                </div>
-
-                <div class="gallery-item">
-                    <a href="img/gallery/demo.png">
-                        <img src="img/gallery/demo.png"/>
-                    </a>
-                </div>
-
-
-                <div class="gallery-item">
-                    <a href="img/gallery/demo.png">
-                        <img src="img/gallery/demo.png"/>
-                    </a>
-                </div>
-
-
-                <div class="gallery-item">
-                    <a href="img/gallery/demo.png">
-                        <img src="img/gallery/demo.png"/>
-                    </a>
-                </div>
-
-                <div class="gallery-item">
-                    <a href="img/gallery/demo.png">
-                        <img src="img/gallery/demo.png"/>
-                    </a>
-                </div>
-
-
-                <div class="gallery-item">
-                    <a href="img/gallery/demo.png">
-                        <img src="img/gallery/demo.png"/>
-                    </a>
-                </div>
-
-
-                <div class="gallery-item">
-                    <a href="img/gallery/demo.png">
-                        <img src="img/gallery/demo.png"/>
-                    </a>
-                </div>
-
-                <div class="gallery-item">
-                    <a href="img/gallery/demo.png">
-                        <img src="img/gallery/demo.png"/>
-                    </a>
-                </div>
-
-
-                <div class="gallery-item">
-                    <a href="img/gallery/demo.png">
-                        <img src="img/gallery/demo.png"/>
-                    </a>
-                </div>
-
-
-                <div class="gallery-item">
-                    <a href="img/gallery/demo.png">
-                        <img src="img/gallery/demo.png"/>
-                    </a>
-                </div>
-
-
-        </script>
-
-        <script type="text/template" id="follow-subview-tmpl">
-            Oh this is the follow page!!!
-            <button>Close</button>
-        </script>
-
-        <script type="text/template" id="tearooms-subview-tmpl">
-            Oh this is the tearooms page!!!
-            <button>Close</button>
-        </script>
-
-        <script type="text/template" id="info-subview-tmpl">
-            Oh this is the info page!!!
-            <button>Close</button>
-        </script>
-
-
 
     </body>
 </html>
-
-
-<!--
-if (window.devicePixelRatio == 1.5) {
-          document.write('<link rel="stylesheet" type="text/css" href="css/hdpi.css">');
-        } else if (window.devicePixelRatio == 1) {
-          document.write('<link rel="stylesheet" type="text/css" href="css/mdpi.css">');
-        } else if (window.devicePixelRatio == 2) {
-          document.write('<link rel="stylesheet" type="text/css" href="css/xhdpi.css">');
-        } else if (window.devicePixelRatio == 0.75) {
-          document.write('<link rel="stylesheet" type="text/css" href="css/ldpi.css">');
-        }
--->
-
-

@@ -1,321 +1,4 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
-/* line 23, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-* {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  /* make transparent link selection, adjust last value opacity 0 to 1.0 */
-}
-
-/* apply a natural box layout model to all elements */
-/* line 28, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-* {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-/* line 32, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-body {
-  -webkit-touch-callout: none;
-  /* prevent callout to copy image, etc when tap to hold */
-  -webkit-text-size-adjust: none;
-  /* prevent webkit from resizing text to fit */
-  -webkit-user-select: none;
-  /* prevent copy paste, to allow, change 'none' to 'text' */
-  background-color: #000;
-  font-size: 12px;
-  height: 100%;
-  margin: 0px;
-  padding: 0px;
-  text-transform: uppercase;
-  width: 100%;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 300;
-}
-
-/* Landscape layout (with min-width) */
-@media screen and (min-aspect-ratio: 1 / 1) and (min-width: 400px) {
-  /* line 52, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-  .app {
-    background-position: left center;
-    padding: 75px 0px 75px 170px;
-    /* padding-top + padding-bottom + text area = image height */
-    margin: -90px 0px 0px -198px;
-    /* offset vertical: half of image height */
-    /* offset horizontal: half of image width and text area width */
-  }
-}
-/* line 60, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-h1 {
-  font-size: 24px;
-  font-weight: normal;
-  margin: 0px;
-  overflow: visible;
-  padding: 0px;
-  text-align: center;
-}
-
-/* ANIMATIONS */
-/* line 75, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-.animated {
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -ms-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-duration: 0.3s;
-  -moz-animation-duration: 0.3s;
-  -ms-animation-duration: 0.3s;
-  -o-animation-duration: 0.3s;
-  animation-duration: 0.3s;
-}
-
-/* line 75, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-.animated.hinge {
-  -webkit-animation-duration: 0.3s;
-  -moz-animation-duration: 0.3s;
-  -ms-animation-duration: 0.3s;
-  -o-animation-duration: 0.3s;
-  animation-duration: 0.3s;
-}
-
-/************************************************************************
-    ANIMATE FADE UP
-*/
-@-webkit-keyframes fadeInUpBig {
-  /* line 82, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(1000px);
-  }
-
-  /* line 85, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-  }
-}
-
-@-moz-keyframes fadeInUpBig {
-  /* line 92, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-  0% {
-    opacity: 0;
-    -moz-transform: translateY(1000px);
-  }
-
-  /* line 97, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-  100% {
-    opacity: 1;
-    -moz-transform: translateY(0);
-  }
-}
-
-@-o-keyframes fadeInUpBig {
-  /* line 104, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-  0% {
-    opacity: 0;
-    -o-transform: translateY(1000px);
-  }
-
-  /* line 109, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-  100% {
-    opacity: 1;
-    -o-transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUpBig {
-  /* line 116, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-  0% {
-    opacity: 0;
-    transform: translateY(1000px);
-  }
-
-  /* line 121, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* line 127, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-.fadeInUpBig {
-  -webkit-animation-name: fadeInUpBig;
-  -moz-animation-name: fadeInUpBig;
-  -o-animation-name: fadeInUpBig;
-  animation-name: fadeInUpBig;
-}
-
-/************************************************************************
-    ANIMATE SLIDE IN FROM RIGHT UP
-*/
-@-webkit-keyframes slideInRight {
-  /* line 139, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(2000px);
-  }
-
-  /* line 142, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-  100% {
-    -webkit-transform: translateX(0);
-  }
-}
-
-@-moz-keyframes slideInRight {
-  /* line 148, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-  0% {
-    opacity: 0;
-    -moz-transform: translateX(2000px);
-  }
-
-  /* line 153, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-  100% {
-    -moz-transform: translateX(0);
-  }
-}
-
-@-o-keyframes slideInRight {
-  /* line 159, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-  0% {
-    opacity: 0;
-    -o-transform: translateX(2000px);
-  }
-
-  /* line 164, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-  100% {
-    -o-transform: translateX(0);
-  }
-}
-
-@keyframes slideInRight {
-  /* line 170, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-  0% {
-    opacity: 0;
-    transform: translateX(2000px);
-  }
-
-  /* line 175, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-  100% {
-    transform: translateX(0);
-  }
-}
-
-/* line 180, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-.slideInRight {
-  -webkit-animation-name: slideInRight;
-  -moz-animation-name: slideInRight;
-  -o-animation-name: slideInRight;
-  animation-name: slideInRight;
-}
-
-/************************************************************************
-    ANIMATE FADE DOWN
-*/
-@-webkit-keyframes fadeInDownBig {
-  /* line 195, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-  0% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-  }
-
-  /* line 198, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(1000px);
-  }
-}
-
-@-moz-keyframes fadeInDownBig {
-  /* line 205, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-  0% {
-    opacity: 1;
-    -moz-transform: translateY(0);
-  }
-
-  /* line 210, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-  100% {
-    opacity: 0;
-    -moz-transform: translateY(1000px);
-  }
-}
-
-@-o-keyframes fadeInDownBig {
-  /* line 217, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-  0% {
-    opacity: 1;
-    -o-transform: translateY(0);
-  }
-
-  /* line 222, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-  100% {
-    opacity: 0;
-    -o-transform: translateY(1000px);
-  }
-}
-
-@keyframes fadeInDownBig {
-  /* line 229, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* line 234, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-  100% {
-    opacity: 0;
-    transform: translateY(1000px);
-  }
-}
-
-/* line 241, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-.fadeInDownBig {
-  -webkit-animation-name: fadeInDownBig;
-  -moz-animation-name: fadeInDownBig;
-  -o-animation-name: fadeInDownBig;
-  animation-name: fadeInDownBig;
-}
-
-/* MENU - add to _menu.scss */
-/* line 251, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-#app-container {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-/* line 258, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-.page {
-  position: absolute;
-  /*top: 1000px; */
-  /* top level sub pages "below" menu page */
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  z-index: 991;
-  background-color: white;
-}
-
-/* line 277, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
+/* line 3, /Users/bmurdoch/personal/doneraile/www/scss/_menu.scss */
 #menu {
   position: absolute;
   top: 0;
@@ -330,7 +13,7 @@ h1 {
   z-index: 990;
 }
 
-/* line 292, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
+/* line 18, /Users/bmurdoch/personal/doneraile/www/scss/_menu.scss */
 #menu #menu-header {
   height: 100px;
   font-size: 38px;
@@ -345,7 +28,7 @@ h1 {
   min-width: 270px;
 }
 
-/* line 307, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
+/* line 33, /Users/bmurdoch/personal/doneraile/www/scss/_menu.scss */
 #menu ul {
   padding: 0;
   margin: 20px;
@@ -355,7 +38,7 @@ h1 {
   display: block;
   background-color: rgba(0, 0, 0, 0.4);
 }
-/* line 318, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
+/* line 44, /Users/bmurdoch/personal/doneraile/www/scss/_menu.scss */
 #menu ul li {
   position: relative;
   border-bottom: 1px solid;
@@ -388,7 +71,7 @@ h1 {
         background-color: rgba(162,0,255, 0.8);
       }
       &:nth-child(5) {
-        
+  
       background-color: rgba(245, 220, 0, 0.8);
       }
       &:nth-child(6) {
@@ -397,18 +80,22 @@ h1 {
   
     */
 }
+/* line 97, /Users/bmurdoch/personal/doneraile/www/scss/_menu.scss */
+#menu ul li a {
+  text-decoration: none;
+}
 
-/* line 374, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
+/* line 105, /Users/bmurdoch/personal/doneraile/www/scss/_menu.scss */
 #menu ul li:nth-child(odd) {
   float: right;
 }
 
-/* line 378, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
+/* line 109, /Users/bmurdoch/personal/doneraile/www/scss/_menu.scss */
 #menu ul li.fullwidth {
   width: 94% !important;
 }
 
-/* line 385, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
+/* line 116, /Users/bmurdoch/personal/doneraile/www/scss/_menu.scss */
 #menu ul li span {
   display: block;
   width: 64px;
@@ -417,13 +104,13 @@ h1 {
   background-position: center center;
 }
 
-/* line 393, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
+/* line 124, /Users/bmurdoch/personal/doneraile/www/scss/_menu.scss */
 #menu ul li h1 {
-  font-size: 20px;
+  font-size: 18px;
   padding: 0px;
   text-align: center;
   position: absolute;
-  bottom: 5px;
+  bottom: 8px;
   text-align: center;
   display: block;
   width: 100%;
@@ -432,49 +119,310 @@ h1 {
   text-shadow: 1px 1px 0px #000000;
 }
 
-/* line 411, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
+/* line 142, /Users/bmurdoch/personal/doneraile/www/scss/_menu.scss */
 .icon-history {
   background: url("../img/literature-64.png") no-repeat;
 }
 
-/* line 416, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
+/* line 147, /Users/bmurdoch/personal/doneraile/www/scss/_menu.scss */
 .icon-info {
   background: url("../img/info-64.png") no-repeat;
 }
 
-/* line 420, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
+/* line 151, /Users/bmurdoch/personal/doneraile/www/scss/_menu.scss */
 .icon-cafe {
   background: url("../img/cafe-64.png") no-repeat;
 }
 
-/* line 424, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
+/* line 155, /Users/bmurdoch/personal/doneraile/www/scss/_menu.scss */
 .icon-gallery {
   background: url("../img/stack-of-photos-64.png") no-repeat;
 }
 
-/* line 428, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
+/* line 159, /Users/bmurdoch/personal/doneraile/www/scss/_menu.scss */
 .icon-follow {
   background: url("../img/facebook-3-64.png") no-repeat;
 }
 
-/* line 433, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
+/* line 2, /Users/bmurdoch/personal/doneraile/www/scss/_gallery.scss */
 #subview-gallery {
   background-color: black;
-  padding: 10px 0 0 10px;
+  padding: 0;
   text-align: center;
 }
-/* line 439, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
+/* line 8, /Users/bmurdoch/personal/doneraile/www/scss/_gallery.scss */
 #subview-gallery .gallery-item {
   display: inline-block;
+  width: 25%;
+  position: relative;
+  padding: 0px;
+  height: 100px;
+  clear: none;
+  float: left;
+  outline: 4px solid black;
+  overflow: hidden;
 }
-/* line 443, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
+/* line 20, /Users/bmurdoch/personal/doneraile/www/scss/_gallery.scss */
 #subview-gallery .gallery-item a {
   display: inline-block;
-}
-/* line 447, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
-#subview-gallery .gallery-item a img {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
   height: 100px;
-  width: 100px;
+  overflow: hidden;
+}
+/* line 29, /Users/bmurdoch/personal/doneraile/www/scss/_gallery.scss */
+#subview-gallery .gallery-item a img {
   display: inline-block;
-  margin: 0 10px 10px 0;
+  height: 96px;
+  width: 100%;
+  margin: 0px;
+}
+
+/* line 2, /Users/bmurdoch/personal/doneraile/www/scss/_follow.scss */
+#subview-follow {
+  background-color: black;
+  padding: 0;
+}
+/* line 7, /Users/bmurdoch/personal/doneraile/www/scss/_follow.scss */
+#subview-follow ul {
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+/* line 15, /Users/bmurdoch/personal/doneraile/www/scss/_follow.scss */
+#subview-follow ul li {
+  height: 50%;
+  position: relative;
+}
+/* line 20, /Users/bmurdoch/personal/doneraile/www/scss/_follow.scss */
+#subview-follow ul li h1 {
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+  text-transform: none;
+  font-size: 30px;
+  position: absolute;
+  bottom: 20px;
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+/* line 32, /Users/bmurdoch/personal/doneraile/www/scss/_follow.scss */
+#subview-follow ul li#twitter {
+  background: #598dca url("../img/icon-tw.png") no-repeat center center;
+}
+/* line 37, /Users/bmurdoch/personal/doneraile/www/scss/_follow.scss */
+#subview-follow ul li#facebook {
+  background: #3a589b url("../img/icon-fb.png") no-repeat center center;
+}
+
+/* line 1, /Users/bmurdoch/personal/doneraile/www/scss/_history.scss */
+#subview-history {
+  padding: 0 !important;
+}
+/* line 5, /Users/bmurdoch/personal/doneraile/www/scss/_history.scss */
+#subview-history ul {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+/* line 12, /Users/bmurdoch/personal/doneraile/www/scss/_history.scss */
+#subview-history ul li {
+  height: 100px;
+  list-style: none;
+  position: relative;
+  border-bottom: 4px solid #000;
+  border-left: 4px solid #000;
+  border-right: 4px solid #000;
+  background: no-repeat;
+  background-position: center left;
+  background-size: 100%;
+}
+/* line 23, /Users/bmurdoch/personal/doneraile/www/scss/_history.scss */
+#subview-history ul li a {
+  text-decoration: none !important;
+}
+/* line 27, /Users/bmurdoch/personal/doneraile/www/scss/_history.scss */
+#subview-history ul li h1 {
+  color: white;
+  text-shadow: 1px 2px 2px black;
+  text-transform: none;
+  position: absolute;
+  bottom: 0px;
+  left: 15px;
+  font-size: 20px;
+  text-decoration: none !important;
+}
+/* line 39, /Users/bmurdoch/personal/doneraile/www/scss/_history.scss */
+#subview-history ul li#history-chapter-1 {
+  border-top: 4px solid #000;
+  background-image: url("../img/gallery/1.jpg");
+}
+/* line 42, /Users/bmurdoch/personal/doneraile/www/scss/_history.scss */
+#subview-history ul li#history-chapter-2 {
+  background-image: url("../img/gallery/2.jpg");
+}
+/* line 43, /Users/bmurdoch/personal/doneraile/www/scss/_history.scss */
+#subview-history ul li#history-chapter-3 {
+  background-image: url("../img/gallery/3.jpg");
+}
+/* line 44, /Users/bmurdoch/personal/doneraile/www/scss/_history.scss */
+#subview-history ul li#history-chapter-4 {
+  background-image: url("../img/gallery/4.jpg");
+}
+/* line 45, /Users/bmurdoch/personal/doneraile/www/scss/_history.scss */
+#subview-history ul li#history-chapter-5 {
+  background-image: url("../img/gallery/5.jpg");
+}
+/* line 46, /Users/bmurdoch/personal/doneraile/www/scss/_history.scss */
+#subview-history ul li#history-chapter-6 {
+  background-image: url("../img/gallery/6.jpg");
+}
+/* line 47, /Users/bmurdoch/personal/doneraile/www/scss/_history.scss */
+#subview-history ul li#history-chapter-7 {
+  background-image: url("../img/gallery/7.jpg");
+}
+/* line 48, /Users/bmurdoch/personal/doneraile/www/scss/_history.scss */
+#subview-history ul li#history-chapter-8 {
+  background-image: url("../img/gallery/8.jpg");
+}
+/* line 49, /Users/bmurdoch/personal/doneraile/www/scss/_history.scss */
+#subview-history ul li#history-chapter-9 {
+  background-image: url("../img/gallery/9.jpg");
+}
+/* line 50, /Users/bmurdoch/personal/doneraile/www/scss/_history.scss */
+#subview-history ul li#history-chapter-10 {
+  background-image: url("../img/gallery/10.jpg");
+}
+/* line 51, /Users/bmurdoch/personal/doneraile/www/scss/_history.scss */
+#subview-history ul li#history-chapter-11 {
+  background-image: url("../img/gallery/11.jpg");
+}
+/* line 52, /Users/bmurdoch/personal/doneraile/www/scss/_history.scss */
+#subview-history ul li#history-chapter-12 {
+  background-image: url("../img/gallery/12.jpg");
+}
+/* line 53, /Users/bmurdoch/personal/doneraile/www/scss/_history.scss */
+#subview-history ul li#history-chapter-13 {
+  background-image: url("../img/gallery/13.jpg");
+}
+/* line 54, /Users/bmurdoch/personal/doneraile/www/scss/_history.scss */
+#subview-history ul li#history-chapter-14 {
+  background-image: url("../img/gallery/14.jpg");
+}
+/* line 55, /Users/bmurdoch/personal/doneraile/www/scss/_history.scss */
+#subview-history ul li#history-chapter-15 {
+  background-image: url("../img/gallery/15.jpg");
+}
+/* line 56, /Users/bmurdoch/personal/doneraile/www/scss/_history.scss */
+#subview-history ul li#history-chapter-16 {
+  background-image: url("../img/gallery/16.jpg");
+}
+/* line 57, /Users/bmurdoch/personal/doneraile/www/scss/_history.scss */
+#subview-history ul li#history-chapter-17 {
+  background-image: url("../img/gallery/17.jpg");
+}
+/* line 58, /Users/bmurdoch/personal/doneraile/www/scss/_history.scss */
+#subview-history ul li#history-chapter-18 {
+  background-image: url("../img/gallery/18.jpg");
+}
+/* line 59, /Users/bmurdoch/personal/doneraile/www/scss/_history.scss */
+#subview-history ul li#history-chapter-19 {
+  background-image: url("../img/gallery/19.jpg");
+}
+/* line 60, /Users/bmurdoch/personal/doneraile/www/scss/_history.scss */
+#subview-history ul li#history-chapter-20 {
+  background-image: url("../img/gallery/20.jpg");
+}
+/* line 61, /Users/bmurdoch/personal/doneraile/www/scss/_history.scss */
+#subview-history ul li#history-chapter-21 {
+  background-image: url("../img/gallery/21.jpg");
+}
+/* line 62, /Users/bmurdoch/personal/doneraile/www/scss/_history.scss */
+#subview-history ul li#history-chapter-22 {
+  background-image: url("../img/gallery/22.jpg");
+}
+/* line 63, /Users/bmurdoch/personal/doneraile/www/scss/_history.scss */
+#subview-history ul li#history-chapter-23 {
+  background-image: url("../img/gallery/23.jpg");
+}
+/* line 64, /Users/bmurdoch/personal/doneraile/www/scss/_history.scss */
+#subview-history ul li#history-chapter-24 {
+  background-image: url("../img/gallery/24.jpg");
+}
+/* line 65, /Users/bmurdoch/personal/doneraile/www/scss/_history.scss */
+#subview-history ul li#history-chapter-25 {
+  background-image: url("../img/gallery/25.jpg");
+}
+/* line 66, /Users/bmurdoch/personal/doneraile/www/scss/_history.scss */
+#subview-history ul li#history-chapter-26 {
+  background-image: url("../img/gallery/26.jpg");
+}
+/* line 67, /Users/bmurdoch/personal/doneraile/www/scss/_history.scss */
+#subview-history ul li#history-chapter-27 {
+  background-image: url("../img/gallery/27.jpg");
+}
+/* line 68, /Users/bmurdoch/personal/doneraile/www/scss/_history.scss */
+#subview-history ul li#history-chapter-28 {
+  background-image: url("../img/gallery/1.jpg");
+}
+/* line 69, /Users/bmurdoch/personal/doneraile/www/scss/_history.scss */
+#subview-history ul li#history-chapter-29 {
+  background-image: url("../img/gallery/2.jpg");
+}
+
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+/* line 28, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+/* line 32, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
+.ui-page {
+  -webkit-backface-visibility: hidden;
+}
+
+/* apply a natural box layout model to all elements */
+/* line 35, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 39, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
+body {
+  background-color: black !important;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+/* line 46, /Users/bmurdoch/personal/doneraile/www/scss/master.scss */
+#menu h1 {
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0px;
+  overflow: visible;
+  padding: 0px;
+  text-align: center;
 }

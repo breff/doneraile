@@ -1,35 +1,49 @@
 
 dd.ns("view");
 
-dd.view.Gallery = dd.view.TopLevelView.extend({
+dd.view.Gallery = dd.view.View.extend({
 
-    id: "subview-gallery",
-    className: "animated",
     _ssInited: false,
 
     initialize: function(options) {
-        this.options = $.extend({}, { templateSelector: "#gallery-subview-tmpl"}, options);
-        this.constructor.__super__.initialize.apply(this); 
+        this.constructor.__super__.initialize.apply(this);
+
+        // this.options.router.on ("route", function (route) {
+        //
+        //     if (route === "_default") {
+        //         if ($(".ps-document-overlay").is(":visible")) {
+        //             $(".ps-toolbar-content").click();
+        //         }
+        //     }
+        // });
 
 	},
 
     refresh: function() {
-        this.render({model:{}});
-        console.log("render");
-        this._initSS ();
+        if (!this._ssInited) {
+            this._initSS ();
+            this._ssInited = true;
+        }
     },
 
     _initSS: function () {
 
-        //if (!this._ssInited) {
-            var ssOptions = { enableKeyboard: true, backButtonHideEnabled: true, preventDefaultTouchEvents: true, captionAndToolbarAutoHideDelay: 0, captionAndToolbarFlipPosition: false, captionAndToolbarShowEmptyCaptions: false};
-            //$(document.body).bind ("photoswipe.onhide", this._slideshowCleanup);
+        if (!this._ssInited) {
 
-            //this._slideshow.ref = 
-                this.$el.find(".gallery-item a").photoSwipe(ssOptions);
-            this._ssInited = true;
-        //}
+            var images = "";
+
+            for (var i=1; i<=27; i++) {
+                images += '<div class="gallery-item"><a href="img/gallery/'+i+'.jpg"><img src="img/gallery/'+i+'-thumb.png"/></a></div>';
+            }
+            this.$el.find("#subview-gallery").html (images);
+
+        }
+
+        var ssOptions = { enableKeyboard: false, backButtonHideEnabled: true, preventDefaultTouchEvents: true, captionAndToolbarAutoHideDelay: 0, captionAndToolbarFlipPosition: false, captionAndToolbarShowEmptyCaptions: false};
+        //$(document.body).bind ("photoswipe.onhide", this._slideshowCleanup);
+
+        //this._slideshow.ref =
+            this.$el.find(".gallery-item a").photoSwipe(ssOptions);
     }
 
 });
-

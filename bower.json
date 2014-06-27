@@ -5,7 +5,7 @@
     "Bref Murdoch <breffni_murdoch@yahoo.co.uk>"
   ],
   "description": "Doneraill Mobile App",
-  "directory" : "www/bower_components",
+  "directory": "www/bower_components",
   "main": "www/js/libs/backbone/backbone-min.js",
   "license": "MIT",
   "private": true,
@@ -22,6 +22,10 @@
     "fastclick": "~0.6.10",
     "handlebars": "~1.1.2",
     "jquery": "~2.0.3",
+    "jquery-mobile": "~1.4.2",
     "underscore": "~1.5.2"
+  },
+  "resolutions": {
+    "jquery": "~2.0.3"
   }
 }
